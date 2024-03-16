@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<h1>Select a Difficulty To Play</h1>
+
+<form action="/select/Easy" method="POST">
+    <input type="submit" value="Easy">
+</form>
+
+<form action="/select/Medium" method="POST">
+    <input type="submit" value="Medium">
+</form>
+
+<form action="/select/Hard" method="POST">
+    <input type="submit" value="Hard">
+</form>
+
+<form action="/select/Random" method="POST">
+    <input type="submit" value="Random">
+</form>
+
+<%- include('partials/footer') %>

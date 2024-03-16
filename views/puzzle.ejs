@@ -1,0 +1,512 @@
+<%- include('partials/header') %>
+
+<%if (!puzzle) {%>
+    <h1>A Puzzle Was Provided</h1>
+<%}%>
+
+<form action="/puzzle/submit" method="POST">
+
+    <table>
+        <caption>Sudoku</caption>
+        <colgroup><col><col><col>
+        <colgroup><col><col><col>
+        <colgroup><col><col><col>
+        <tbody>
+        <tr> <td><% if (puzzle[0][0]===0) { %>
+                <input type="text" name="0.0" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][0] %>
+            <% } %>  
+
+            <td><% if (puzzle[0][1]===0) { %>
+                <input type="text" name="0.1" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][1] %>
+            <% } %>  
+            
+            <td><% if (puzzle[0][2]===0) { %>
+                <input type="text" name="0.2" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][2] %>
+            <% } %>  
+            
+            <td><% if (puzzle[0][3]===0) { %>
+                <input type="text" name="0.3" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][3] %>
+            <% } %>  
+            
+            <td><% if (puzzle[0][4]===0) { %>
+                <input type="text" name="0.4" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][4] %>
+            <% } %>  
+            
+            <td><% if (puzzle[0][5]===0) { %>
+                <input type="text" name="0.5" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][5] %>
+            <% } %>  
+            
+            <td><% if (puzzle[0][6]===0) { %>
+                <input type="text" name="0.6" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][6] %>
+            <% } %>    
+            
+            <td><% if (puzzle[0][7]===0) { %>
+                <input type="text" name="0.7" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[0][7] %>
+            <% } %>      
+            
+            <td><% if (puzzle[0][8]===0) { %>
+                <input type="text" name="0.8" size="3" maxlength="1"> 
+            <% } else { %>
+                <%= puzzle[0][8] %>
+            <% } %>   
+
+        <tr> <td><% if (puzzle[1][0]===0) { %>
+            <input type="text" name="1.0" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][0] %>
+            <% } %>   
+            
+            <td><% if (puzzle[1][1]===0) { %>
+                <input type="text" name="1.1" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][1] %>
+            <% } %>   
+                
+            <td><% if (puzzle[1][2]===0) { %>
+                <input type="text" name="1.2" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][2] %>
+            <% } %>     
+            
+            <td><% if (puzzle[1][3]===0) { %>
+                <input type="text" name="1.3" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][3] %>
+            <% } %>     
+            
+            <td><% if (puzzle[1][4]===0) { %>
+                <input type="text" name="1.4" size="3" maxlength="1"
+            <% } else { %>
+                <%= puzzle[1][4] %>
+            <% } %></td>
+                
+            <td><% if (puzzle[1][5]===0) { %>
+                <input type="text" name="1.5" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][5] %>
+            <% } %>  
+            
+            <td><% if (puzzle[1][6]===0) { %>
+                <input type="text" name="1.6" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][6] %>
+            <% } %>    
+            
+            <td><% if (puzzle[1][7]===0) { %>
+                <input type="text" name="1.7" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][7] %>
+            <% } %>      
+            
+            <td><% if (puzzle[1][8]===0) { %>
+                <input type="text" name="1.8" size="3" maxlength="1">
+            <% } else { %>
+                <%= puzzle[1][8] %>
+            <% } %> 
+
+        <tr> <td><% if (puzzle[2][0]===0) { %>
+            <input type="text" name="2.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][0] %>
+        <% } %>   
+        
+        <td><% if (puzzle[2][1]===0) { %>
+            <input type="text" name="2.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][1] %>
+        <% } %>     
+        
+        <td><% if (puzzle[2][2]===0) { %>
+            <input type="text" name="2.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][2] %>
+        <% } %>     
+        
+        <td><% if (puzzle[2][3]===0) { %>
+            <input type="text" name="2.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][3] %>
+        <% } %>
+        
+        <td><% if (puzzle[2][4]===0) { %>
+            <input type="text" name="2.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][4] %>
+        <% } %>  
+        
+        <td><% if (puzzle[2][5]===0) { %>
+            <input type="text" name="2.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][5] %>
+        <% } %>  
+        
+        <td><% if (puzzle[2][6]===0) { %>
+            <input type="text" name="2.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][6] %>
+        <% } %>  
+        
+        <td><% if (puzzle[2][7]===0) { %>
+            <input type="text" name="2.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][7] %>
+        <% } %>    
+        
+        <td><% if (puzzle[2][8]===0) { %>
+            <input type="text" name="2.8" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[2][8] %>
+        <% } %>
+
+        <tbody>
+        <tr> <td><% if (puzzle[3][0]===0) { %>
+            <input type="text" name="3.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][0] %>
+        <% } %>  
+        
+        <td><% if (puzzle[3][1]===0) { %>
+            <input type="text" name="3.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][1] %>
+        <% } %>    
+        
+        <td><% if (puzzle[3][2]===0) { %>
+            <input type="text" name="3.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][2] %>
+        <% } %>   
+        
+        <td><% if (puzzle[3][3]===0) { %>
+            <input type="text" name="3.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][3] %>
+        <% } %>     
+        
+        <td><% if (puzzle[3][4]===0) { %>
+            <input type="text" name="3.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][4] %>
+        <% } %>     
+        
+        <td><% if (puzzle[3][5]===0) { %>
+            <input type="text" name="3.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][5] %>
+        <% } %>    
+        
+        <td><% if (puzzle[3][6]===0) { %>
+            <input type="text" name="3.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][6] %>
+        <% } %>      
+        
+        <td><% if (puzzle[3][7]===0) { %>
+            <input type="text" name="3.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][7] %>
+        <% } %>    
+        
+        <td><% if (puzzle[3][8]===0) { %>
+            <input type="text" name="3.8" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[3][8] %>
+        <% } %>  
+
+        <tr> <td><% if (puzzle[4][0]===0) { %>
+            <input type="text" name="4.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][0] %>
+        <% } %>    
+        
+        <td><% if (puzzle[4][1]===0) { %>
+            <input type="text" name="4.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][1] %>
+        <% } %>   
+        
+        <td><% if (puzzle[4][2]===0) { %>
+            <input type="text" name="4.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][2] %>
+        <% } %>   
+        
+        <td><% if (puzzle[4][3]===0) { %>
+            <input type="text" name="4.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][3] %>
+        <% } %>   
+        
+        <td><% if (puzzle[4][4]===0) { %>
+            <input type="text" name="4.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][4] %>
+        <% } %>    
+        
+        <td><% if (puzzle[4][5]===0) { %>
+            <input type="text" name="4.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][5] %>
+        <% } %>      
+        
+        <td><% if (puzzle[4][6]===0) { %>
+            <input type="text" name="4.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][6] %>
+        <% } %>   
+        
+        <td><% if (puzzle[4][7]===0) { %>
+            <input type="text" name="4.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][7] %>
+        <% } %>     
+        
+        <td><% if (puzzle[4][8]===0) { %>
+            <input type="text" name="4.8" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[4][8] %>
+        <% } %>   
+
+        <tr> <td><% if (puzzle[5][0]===0) { %>
+            <input type="text" name="5.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][0] %>
+        <% } %>    
+        
+        <td><% if (puzzle[5][1]===0) { %>
+            <input type="text" name="5.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][1] %>
+        <% } %>    
+        
+        <td><% if (puzzle[5][2]===0) { %>
+            <input type="text" name="5.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][2] %>
+        <% } %>     
+        
+        <td><% if (puzzle[5][3]===0) { %>
+            <input type="text" name="5.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][3] %>
+        <% } %>     
+        
+        <td><% if (puzzle[5][4]===0) { %>
+            <input type="text" name="5.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][4] %>
+        <% } %>   
+        
+        <td><% if (puzzle[5][5]===0) { %>
+            <input type="text" name="5.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][5] %>
+        <% } %>     
+        
+        <td><% if (puzzle[5][6]===0) { %>
+            <input type="text" name="5.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][6] %>
+        <% } %>    
+        
+        <td><% if (puzzle[5][7]===0) { %>
+            <input type="text" name="5.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[5][7] %>
+        <% } %>    
+        
+        <td><% if (puzzle[5][8]===0) { %>
+            <input type="text" name="5.8" size="3" maxlength="1"> 
+        <% } else { %>
+            <%= puzzle[5][8] %>
+        <% } %>  
+
+        <tbody>
+        <tr> <td><% if (puzzle[6][0]===0) { %>
+            <input type="text" name="6.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][0] %>
+        <% } %>   
+        
+        <td><% if (puzzle[6][1]===0) { %>
+            <input type="text" name="6.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][1] %>
+        <% } %>     
+        
+        <td><% if (puzzle[6][2]===0) { %>
+            <input type="text" name="6.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][2] %>
+        <% } %>   
+        
+        <td><% if (puzzle[6][3]===0) { %>
+            <input type="text" name="6.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][3] %>
+        <% } %>   
+        
+        <td><% if (puzzle[6][4]===0) { %>
+            <input type="text" name="6.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][4] %>
+        <% } %>    
+        
+        <td><% if (puzzle[6][5]===0) { %>
+            <input type="text" name="6.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][5] %>
+        <% } %>      
+        
+        <td><% if (puzzle[6][6]===0) { %>
+            <input type="text" name="6.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][6] %>
+        <% } %>     
+        
+        <td><% if (puzzle[6][7]===0) { %>
+            <input type="text" name="6.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][7] %>
+        <% } %>   
+        
+        <td><% if (puzzle[6][8]===0) { %>
+            <input type="text" name="6.8" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[6][8] %>
+        <% } %>  
+
+        <tr> <td><% if (puzzle[7][0]===0) { %>
+            <input type="text" name="7.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][0] %>
+        <% } %>    
+        
+        <td><% if (puzzle[7][1]===0) { %>
+            <input type="text" name="7.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][1] %>
+        <% } %>      
+        
+        <td><% if (puzzle[7][2]===0) { %>
+            <input type="text" name="7.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][2] %>
+        <% } %>   
+        
+        <td><% if (puzzle[7][3]===0) { %>
+            <input type="text" name="7.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][3] %>
+        <% } %>     
+        
+        <td><% if (puzzle[7][4]===0) { %>
+            <input type="text" name="7.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][4] %>
+        <% } %>  
+        
+        <td><% if (puzzle[7][5]===0) { %>
+            <input type="text" name="7.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][5] %>
+        <% } %>    
+        
+        <td><% if (puzzle[7][6]===0) { %>
+            <input type="text" name="7.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][6] %>
+        <% } %>     
+        
+        <td><% if (puzzle[7][7]===0) { %>
+            <input type="text" name="7.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][7] %>
+        <% } %>     
+        
+        <td><% if (puzzle[7][8]===0) { %>
+            <input type="text" name="7.8" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[7][8] %>
+        <% } %> 
+
+        <tr> <td><% if (puzzle[8][0]===0) { %>
+            <input type="text" name="8.0" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][0] %>
+        <% } %>   
+        
+        <td><% if (puzzle[8][1]===0) { %>
+            <input type="text" name="8.1" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][1] %>
+        <% } %>   
+        
+        <td><% if (puzzle[8][2]===0) { %>
+            <input type="text" name="8.2" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][2] %>
+        <% } %>   
+        
+        <td><% if (puzzle[8][3]===0) { %>
+            <input type="text" name="8.3" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][3] %>
+        <% } %>     
+            
+        <td><% if (puzzle[8][4]===0) { %>
+            <input type="text" name="8.4" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][4] %>
+        <% } %>     
+        
+        <td><% if (puzzle[8][5]===0) { %>
+            <input type="text" name="8.5" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][5] %>
+        <% } %>     
+        
+        <td><% if (puzzle[8][6]===0) { %>
+            <input type="text" name="8.6" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][6] %>
+        <% } %>    
+        
+        <td><% if (puzzle[8][7]===0) { %>
+            <input type="text" name="8.7" size="3" maxlength="1">
+        <% } else { %>
+            <%= puzzle[8][7] %>
+        <% } %>      
+        
+        <td><% if (puzzle[8][7]===0) { %>
+            <input type="text" name="8.8" size="3" maxlength="1"> 
+        <% } else { %>
+            <%= puzzle[8][7] %>
+        <% } %> 
+    </table>
+
+    <input type="submit" value="Submit Answers">
+
+</form>
+<h3>Think this is too difficult or too easy?</h3>
+<form action="/changePuzzleDifficulty" method="POST">
+    <input type="submit" value="Change this puzzle's difficulty">
+</form>
+
+<%- include('partials/footer') %>

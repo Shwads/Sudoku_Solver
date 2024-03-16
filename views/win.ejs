@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h1>Congratulations! You Solved It!</h1>
+<h2>Would you like to try another?</h2>
+<form action="/select" method="GET">
+    <input type="submit" value="Complete Another">
+</form>
+<form action="/" method="GET">
+    <input type="submit" value="Home">
+</form>
+
+<%- include('partials/footer') %>

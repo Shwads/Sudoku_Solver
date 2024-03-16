@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h1>Sorry, your solution wasn't correct :(</h1>
+<h2>Would you like to try again?</h2>
+<form action="/tryAgain" method="POST">
+    <input type="submit" value="Try Again">
+</form>
+<form action="/" method="GET">
+    <input type="submit" value="Home">
+</form>
+
+<%- include('partials/footer') %>
